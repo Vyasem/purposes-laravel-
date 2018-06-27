@@ -1,0 +1,376 @@
+@font-face {
+    font-family: "MarckScript-Regular";
+    src: url("../fonts/MarckScript-Regular.eot"); /* IE9 Compat Modes */
+    src: url("../fonts/MarckScript-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/MarckScript-Regular.otf") format("opentype"), /* Open Type Font */
+    url("../fonts/MarckScript-Regular.svg") format("svg"), /* Legacy iOS */
+    url("../fonts/MarckScript-Regular.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("../fonts/MarckScript-Regular.woff") format("woff"), /* Modern Browsers */
+    url("../fonts/MarckScript-Regular.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
+html,body
+{
+    margin:0;
+    padding:0;
+}
+
+body
+{
+    font-family: Verdana, Tahoma, 'sans-serif';
+    font-size:12px;
+    color: #000;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+    margin:0;
+    padding:0;
+}
+
+.clr
+{
+    clear:both;
+}
+
+#wrap .form_mask
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:rgba(0, 0, 0, .6);
+    z-index: 998;
+    display:none;
+}
+
+#wrap .content
+{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#wrap .content header
+{
+    height:100px;
+    background-image:url('../images/header_bg.jpg');
+    background-repeat: repeat;
+    padding: 0 20px;
+}
+
+#wrap .content header>div
+{
+    float:left;
+}
+
+#wrap .content header .logo
+{
+    height:100%;
+}
+
+#wrap .content header .logo img
+{
+    height: 100%;
+}
+
+#wrap .content header .quote
+{
+    color:#fff;
+    font-family: "MarckScript-Regular";
+    font-size: 45px;
+    line-height: 100px;
+}
+
+
+#wrap .content header .auth
+{
+    line-height: 100px;
+    text-align: right;
+}
+
+#wrap .content header .form_login .btn,
+#wrap .content header .auth .btn
+{
+    color: #fff;
+    background-color: #498dff;
+    border-color: #498dff;
+}
+
+#wrap .content header .form_login .btn:hover,
+#wrap .content header .auth .btn:hover
+{
+    background-color: #2356ab;
+}
+#wrap .content header .form_login
+{
+    padding: 10px 20px;
+    background-color: #e8e8e8;
+    position: absolute;
+    /*bottom: 70px;*/
+    right: 10px;
+    border-radius: 3px;
+    display:none;
+    top:80px;
+}
+
+#wrap .content .menu
+{
+    height: 50px;
+    background-color: #bdbdbd;
+}
+
+#wrap .content .menu ul
+{
+    list-style: none;
+    margin: 0;
+}
+
+#wrap .content .menu ul li
+{
+    float: left;
+    padding: 9px 15px;
+    line-height: 30px;
+}
+
+#wrap .content .menu ul li a
+{
+    color: #444;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#wrap .content .menu ul li a:hover
+{
+    color:#2d3469;
+    text-decoration: none;
+}
+
+
+
+
+#wrap .content .page_content
+{
+    min-height: calc(100vh - 200px);
+}
+
+#wrap .content .page_content .info_block
+{
+    min-height: 300px;
+    margin: 20px 0;
+    background-color: #f3f3f3;
+    border: 1px solid #b9b9b9;
+    border-radius: 4px;
+    box-shadow: 3px 3px 12px 0px #d9d9d9;
+}
+
+#wrap .content .page_content .info_block.user_page
+{
+    height:auto;
+    padding:10px;
+}
+
+#wrap .content .page_content .info_block .title
+{
+    padding: 10px;
+    color: #666;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#wrap .content .page_content .info_block.user_menu .title
+{
+    font-size: 14px;
+}
+
+#wrap .content .page_content .info_block.user_menu .block ul
+{
+    padding: 0;
+    list-style:none;
+}
+
+#wrap .content .page_content .info_block .sub_title
+{
+    padding: 0 15px 0;
+    color: #666;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#wrap .content .page_content .info_block .block
+{
+    padding: 0 10px;
+    color: #666;
+    height: 100%;
+}
+
+#wrap .content .page_content .info_block .block .item
+{
+    border-bottom: 1px solid #d2d2d2;
+    padding: 19px 5px;
+}
+
+#wrap .content .page_content .info_block .block .item:last-child
+{
+    border: 0;
+}
+
+#wrap .content .page_content .info_block .block .item span:nth-child(2)
+{
+    float: right;
+    font-weight: bold;
+}
+
+#wrap .content .page_content .info_block .block svg
+{
+    width: 100%;
+    height: 100%;
+}
+
+#wrap .content .page_content .reg_block
+{
+    padding: 20px;
+}
+
+#wrap .content .page_content .reg_block h2
+{
+    padding: 20px;
+}
+
+#wrap .content .page_content .reg_block input[type=checkbox]
+{
+    margin-right: 10px
+}
+
+#wrap .content .page_content .goals_page ul,
+#wrap .content .page_content .goals_page .goals_block ul
+{
+    list-style:none;
+    padding:0;
+}
+
+#wrap .content .page_content .goals_page .goals_list  ul li
+{
+    padding: 5px 0;
+    cursor:pointer;
+    color: #007fff;
+    border-bottom: 1px solid #737373;
+    position: relative;
+}
+
+#wrap .content .page_content .goals_page .goals_list  ul li input
+{
+    width:13px;
+    height: 13px;
+    vertical-align: middle;
+}
+
+#wrap .content .page_content .goals_page .goal_menu
+{
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+}
+
+#wrap .content .page_content .goals_page .goal_menu .menu_content
+{
+    width: 175px;
+    height: 76px;
+    border: 1px solid #000;
+    background-color: #fcfcfc;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 1;
+    padding:10px;
+    display:none;
+}
+
+#wrap .content .page_content .goals_page .goal_menu .menu_content a
+{
+    display:block;
+}
+
+
+#wrap .content .page_content .goals_page  ul li .content_block
+{
+    display: inline-block;
+    width: calc(100% - 18px);
+}
+
+#wrap .content .page_content .goals_page .goals_list  ul li a:hover
+{
+    text-decoration:none;
+}
+
+#wrap .content .page_content .goals_page .goals_list ul li span,
+#wrap .content .page_content .goals_page .goals_block ul li span
+{
+    color: #FF0000;
+    float: right;
+}
+
+#wrap .content .page_content .goals_page .buttons
+{
+    margin-bottom: 10px;
+}
+
+#wrap .content .page_content .goals_page .buttons > div
+{
+    display: inline-block;
+    color: #007fff;
+    border: 1px solid #000;
+    padding: 15px;
+    cursor:pointer;
+}
+
+#wrap .content .page_content .goals_page .goals_block ul li
+{
+    padding: 5px 0;
+    cursor:pointer;
+    color: #007fff;
+    position: relative;
+}
+
+#wrap .content .page_content .goals_page .goals_block ul li .stage_title
+{
+    border-bottom: 1px solid #737373;
+}
+
+#wrap .content .page_content .goals_page .goals_block ul li .stage table
+{
+    width: 100%;
+    color: #000;
+    margin-top:10px;
+}
+
+#wrap .content .page_content .goals_page .goals_block ul li .stage table thead
+{
+    font-weight: bold;
+}
+#wrap .content .page_content .goals_page .goals_block ul li .stage table thead td,
+#wrap .content .page_content .goals_page .goals_block ul li .stage table tbody td
+{
+    border: 1px solid #000;
+    text-align: center;
+    padding: 5px;
+}
+
+
+#wrap .content footer
+{
+    height:50px;
+    background-image:url('../images/header_bg.jpg');
+    background-repeat: repeat;
+    padding: 0 20px;
+    text-align: right;
+}
+
+#wrap .content footer span
+{
+    color:#fff;
+    line-height: 50px;
+}

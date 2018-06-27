@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-reboot.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/popper/popper.js"></script>
+    <script src="js/bootstrap/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+    <title>Стремись, учись и достигай.</title>
+</head>
+<body>
+<div id="wrap">
+    <div class="form_mask"></div>
+    <div class="content">
+        <header>
+            <div class="logo col-3">
+                <img src="images/logo.png">
+            </div>
+            <div class="quote col-6">
+                <span>Учись,</span>
+                <span>Стремись,</span>
+                <span>Достигай!</span>
+            </div>
+            <div class="auth col-3">
+                <div class="btn btn_login">Вход</div>
+                <div class="btn btn_reg">Регистрация</div>
+            </div>
+            <div class="form_login">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="" placeholder="Имя пользователя">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control"  name="" placeholder="Пароль">
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Запомнить
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn">Войти</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="clr"></div>
+        </header>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="/">О проекте</a>
+                </li>
+                <li>
+                    <a href="/">Блог</a>
+                </li>
+                <li>
+                    <a href="/">Помощь</a>
+                </li>
+            </ul>
+        </div>
+        <div class="page_content">
+            <div class="row">
+                <div class="col-xs-12 col-md-2">
+                    <div class="info_block user_menu">
+                        <div class="title">Личный кабинет</div>
+                        <div class="block">
+                            <ul>
+                                <li><a href="">Личные данные</a></li>
+                                <li><a href="">Управление целями</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-10">
+                    <div class="info_block goals_page">
+                        <div class="col-xs-12 col-md-12 title">Новый этап</div>
+                        <div class="col-xs-12 col-md-12 buttons">
+                            <div class="add">Создать</div>
+                        </div>
+                        <div class="block col-xs-12 col-md-8">
+                            <form name="" action="" method="post" enctype="multipart/form-data">
+                                <div class="form-group row">
+                                    <label for="form_name" class="col-form-label col-sm-2">Название</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="form_name" placeholder="Название">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="form_sort" class="col-form-label col-sm-2">Приоритет</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="form_sort" placeholder="Приоритет">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="form_start" class="col-form-label col-sm-2">Дата начала</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="form_start" placeholder="Дата начала">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="form_finish" class="col-form-label col-sm-2">Дата завершения</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="form_finish" placeholder="Дата завершения">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="form_des" class="col-form-label col-sm-2">Описание</label>
+                                    <div class="col-sm-10">
+                                        <textarea class="form-control" id="form_des"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="form_stage" class="col-form-label col-sm-2">Условие завершения</label>
+                                    <div class="col-sm-10">
+                                        <textarea class="form-control" id="form_stage"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-form-label col-sm-2" for="status">Состояние </label>
+                                    <div class="col-sm-10">
+                                        <select id="status">
+                                            <option value="">Выполняется</option>
+                                            <option value="">Ожидает</option>
+                                            <option value="">Выполнено</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <span>2018 Copyright©</span>
+        </footer>
+    </div>
+</div>
+</body>
+</html>
