@@ -36,16 +36,18 @@ class Stages extends Model
     public function getStatus($stages)
     {
         $arReturn = array();
-        $singleState = 100 / count($stages);
         $counter = 0;
-        foreach($stages as $sKey => $sVal)
-        {
-           if($sVal->status == 'successful')
-           {
-               $counter++;
-           }
+        $singleState = 0;
+        if(count($stages) > 0){
+            $singleState = 100 / count($stages);
+            foreach($stages as $sKey => $sVal)
+            {
+                if($sVal->status == 'successful')
+                {
+                    $counter++;
+                }
+            }
         }
-
         $arReturn['item_state'] = $counter * $singleState;
         $arReturn['stages'] = $stages;
 

@@ -24,9 +24,17 @@ class TargetController extends Controller
 
     public function targetList($target = null)
     {
+        $result = [];
+        $result['menu'] = $this->menu;
         $allTargets = $this->targets->getTargets(Auth::user(), $target);
-        $stageOne = $this->stages->getStage($allTargets['target_id']);
-        return view('target/list', array('targets' => $allTargets['targets'], 'stage' => $stageOne['stages'], 'state' => $stageOne['item_state'],  'menu' => $this->menu));
+        $result['targets'] = $allTargets['targets'];
+        if(!empty($allTargets['target_id'])){
+            $stageOne = $this->stages->getStage($allTargets['target_id']);
+            $result['stage'] = $stageOne['stages'];
+            $result['state'] = $stageOne['item_state'];
+        }
+
+        return view('target/list', $result);
     }
 
     public function showForm()

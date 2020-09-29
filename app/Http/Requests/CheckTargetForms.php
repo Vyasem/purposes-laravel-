@@ -24,9 +24,18 @@ class CheckTargetForms extends FormRequest
     public function rules()
     {
         return [
-            'target.name' => 'required|alpha_num_dash|unique:targets,name',
+            'target.name' => 'required|unique:targets,name',
             'target.start' => 'required',
             'target.text' => 'required',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'name.required' => 'A name is required',
+            'start.required' => 'A start is required',
+            'text.required' => 'A text is required',
         ];
     }
 }

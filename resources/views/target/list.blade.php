@@ -21,13 +21,13 @@
                                             <div class="goal_menu">
                                                 <div class="meun_icon"><img src="/public/images/menu.svg"></div>
                                                 <div class="menu_content">
-                                                    <a href="/target/change/<?=$tVal->id?>/" >Изменить</a>
-                                                    <a href="/target/stage/<?=$tVal->id?>/" >Добавить условие(этап)</a>
-                                                    <a href="/target/remove/<?=$tVal->id?>/" >Удалить</a>
+                                                    <a href="/target/change/{{$tVal->id}}/" >Изменить</a>
+                                                    <a href="/target/stage/{{$tVal->id}}/" >Добавить условие(этап)</a>
+                                                    <a href="/target/remove/{{$tVal->id}}/" >Удалить</a>
                                                 </div>
                                             </div>
                                             <div class="content_block">
-                                                <a href="/target/show/<?=$tVal->id?>/"><?=$tVal->name?></a><span>Вполнено на {{$state}}%</span>
+                                                <a href="/target/show/{{$tVal->id}}/">{{$tVal->name}}</a><span>Вполнено на {{$state}}%</span>
                                             </div>
                                         </li>
                                     @endforeach
@@ -35,25 +35,27 @@
                                 <div style="clear:both" ></div>
                             </div>
                             <div class="col-xs-12 col-md-8 goals_block">
-                                <ul>
-                                    @foreach($stage as $sKey => $sVal)
-                                        <li>
-                                            <div class="stage_title">
-                                                <div class="goal_menu">
-                                                    <div class="meun_icon"><img src="/public/images/menu.svg"></div>
-                                                    <div class="menu_content">
-                                                        <a href="/stage/edit/<?=$sVal->id?>/" >Изменить</a>
-                                                        <a href="/stage/remove/<?=$sVal->id?>/" >Удалить</a>
+                                @if(!empty($stage))
+                                    <ul>
+                                        @foreach($stage as $sKey => $sVal)
+                                            <li>
+                                                <div class="stage_title">
+                                                    <div class="goal_menu">
+                                                        <div class="meun_icon"><img src="/public/images/menu.svg"></div>
+                                                        <div class="menu_content">
+                                                            <a href="/stage/edit/{{$sVal->id}}/" >Изменить</a>
+                                                            <a href="/stage/remove/{{$sVal->id}}/" >Удалить</a>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="content_block">
-                                                    <a href=""><?=$sVal->name?></a><span><?=$status[$sVal->status]?></span>
-                                                </div>
+                                                    <div class="content_block">
+                                                        <a href="">{{$sVal->name}}</a><span>{{$status[$sVal->status]}}</span>
+                                                    </div>
 
-                                            </div>
-                                        </li>
-                                    @endforeach
-                                </ul>
+                                                </div>
+                                            </li>
+                                        @endforeach
+                                    </ul>
+                                @endif
                             </div>
                         @endif
                     </div>

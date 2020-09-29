@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 /*
 |--------------------------------------------------------------------------
@@ -25,8 +25,8 @@ Route::get('/target/createform/', 'TargetController@showForm');
 Route::post('/target/create/', 'TargetController@createTarget');
 //Route::match(['post', 'get'], '/target/createform/', 'TargetController@showForm');
 //Изменения целей
-Route::get('/target/change/{target}', 'TargetController@changeTarget');
 Route::post('/target/update/', 'TargetController@updateTarget');
+Route::get('/target/change/{target}', 'TargetController@changeTarget');
 //Удаление цели
 Route::get('/target/remove/{target}/', 'TargetController@removeTarget');
 //Отображение целей

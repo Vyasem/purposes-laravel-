@@ -43,7 +43,7 @@ class Targets extends Model
         }
 
         //определить id цели - для получения этапов
-        if(empty($target))
+        if(empty($target) && count($targets) > 0)
         {
             $arResult['target_id'] = $arResult['targets'][0]->id;
         }
