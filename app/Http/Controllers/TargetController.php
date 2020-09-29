@@ -46,7 +46,7 @@ class TargetController extends Controller
     {
         $requestData = $checkForm->all();
         $this->targets->requestHandle($requestData, Auth::user());
-        return redirect('/target/createform/')->with('message', __('message.user_target'));
+        return redirect('/target/show/')->with('message', __('message.user_target'));
     }
 
     public function changeTarget($target)

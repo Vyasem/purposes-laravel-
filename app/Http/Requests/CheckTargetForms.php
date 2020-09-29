@@ -24,7 +24,7 @@ class CheckTargetForms extends FormRequest
     public function rules()
     {
         return [
-            'target.name' => 'required|unique:targets,name',
+            'target.name' => 'required',
             'target.start' => 'required',
             'target.text' => 'required',
         ];
@@ -33,9 +33,16 @@ class CheckTargetForms extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'A name is required',
-            'start.required' => 'A start is required',
-            'text.required' => 'A text is required',
+            'required' => 'Поле :attribute обязательно к заполнению',
+        ];
+    }
+
+    public function attributes()
+    {
+        return [
+            'target.name' => '"Название"',
+            'target.start' => '"Дата начала"',
+            'target.text' => '"Описание"',
         ];
     }
 }

@@ -5,6 +5,11 @@
             @include('left')
         </div>
         <div class="col-xs-12 col-md-10">
+            @if (session('message'))
+                <div class="alert alert-success">
+                    {{session('message')}}
+                </div>
+            @endif
             <div class="info_block goals_page">
                 <div class="col-xs-12 col-md-12 title">Мои цели</div>
                 <div class="col-xs-12 col-md-12 buttons">

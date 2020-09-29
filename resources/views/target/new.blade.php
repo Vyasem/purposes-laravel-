@@ -23,12 +23,18 @@
                             <label for="form_name" class="col-form-label col-sm-2">Название</label>
                             <div class="col-sm-10">
                                 <input type="text" name="target[name]" class="form-control" id="form_name" placeholder="Название" value="{{old('name')}}">
+                                @error('target.name')
+                                    <div class="alert alert-danger">{{$message}}</div>
+                                @enderror
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="form_start" class="col-form-label col-sm-2">Дата начала</label>
                             <div class="col-sm-10">
                                 <input type="date" value="{{old('start')}}"  name="target[start]" class="form-control" id="form_start" placeholder="Дата начала">
+                                    @error('target.start')
+                                    <div class="alert alert-danger">{{$message}}</div>
+                                @enderror
                             </div>
                         </div>
                         <div class="form-group row">
@@ -40,7 +46,10 @@
                         <div class="form-group row">
                             <label for="form_des" class="col-form-label col-sm-2">Описание</label>
                             <div class="col-sm-10">
-                                <textarea name="target[text]" class="form-control" id="form_des">{{old('text')}}</textarea>
+                                <textarea name="target[text]" class="form-control" id="form_des">{{request()->get('text')}}</textarea>
+                                @error('target.text')
+                                    <div class="alert alert-danger">{{$message}}</div>
+                                @enderror
                             </div>
                         </div>
                     </div>
